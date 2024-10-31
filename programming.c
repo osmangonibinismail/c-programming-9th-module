@@ -121,7 +121,6 @@
 //     printf("%d\n", sum);
 // }
 
-
 // #include <stdio.h>
 // #include<limits.h>
 // int main()
@@ -149,54 +148,92 @@
 //     printf("Minimum = %d\nMaximum = %d\n", min,max);
 
 // }
-#include <stdio.h>
-#include<limits.h>
+// #include <stdio.h>
+// #include<limits.h>
 
-int a[100000], b[100000];
+// int a[100000], b[100000];
+
+// int main()
+// {
+//     int length1 = 0, length2 = 0;
+//     scanf("%d", &length1);
+//     int a[length1];
+
+//     for (int i = 0; i < length1; i++)
+//     {
+//         scanf("%d", &a[i]);
+//     }
+
+//     for (int i = 0; i < length1; i++)
+//     {
+//        printf("%d ", a[i]);
+//     }
+//     printf("\n");
+
+//     for (int i = 0; i < length1; i++)
+//     {
+//        printf("%d ", b[i]);
+//     }
+//     printf("\n");
+//     printf("Before array\n");
+
+//     length2 = length1;
+
+//     for (int i = 0; i < length1; i++)
+//     {
+//        b[i] = a[i];
+//     }
+
+//     for (int i = 0; i < length1; i++)
+//     {
+//        printf("%d ", a[i]);
+//     }
+//     printf("\n");
+
+//     for (int i = 0; i < length2; i++)
+//     {
+//        printf("%d ", b[i]);
+//     }
+//     printf("\n");
+//     printf("After array\n");
+
+// }
+#include <stdio.h>
+#include <limits.h>
+
+int a[100000];
 
 int main()
 {
-    int length1 = 0, length2 = 0;
-    scanf("%d", &length1);
-    int a[length1];
+    int length;
+    scanf("%d", &length);
 
-    for (int i = 0; i < length1; i++)
+    for (int i = 0; i < length; i++)
     {
         scanf("%d", &a[i]);
     }
-
-    for (int i = 0; i < length1; i++)
+    // print input
+    for (int i = 0; i < length; i++)
     {
-       printf("%d ", a[i]);
+        printf("%d ", a[i]);
     }
     printf("\n");
 
-    for (int i = 0; i < length1; i++)
-    {
-       printf("%d ", b[i]);
-    }
-    printf("\n");
-    printf("Before array\n");
+    int index, value;
+    scanf("%d %d", &index, &value);
 
-    length2 = length1;
+    length++;
 
-    for (int i = 0; i < length1; i++)
+    for (int i = length - 1; i >= index; i--)
     {
-       b[i] = a[i];
+        a[i + 1] = a[i];
     }
 
-    for (int i = 0; i < length1; i++)
-    {
-       printf("%d ", a[i]);
-    }
-    printf("\n");
+    a[index] = value;
 
-    for (int i = 0; i < length2; i++)
+    // print output
+    for (int i = 0; i < length; i++)
     {
-       printf("%d ", b[i]);
+        printf("%d ", a[i]);
     }
-    printf("\n");
-    printf("After array\n");
-    
-
 }
