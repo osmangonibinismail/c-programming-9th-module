@@ -1,0 +1,6 @@
+9 2 6 9 7 
+0 0 0 0 0 
+Before array
+9 2 6 9 7 
+9 2 6 9 7 
+After array
