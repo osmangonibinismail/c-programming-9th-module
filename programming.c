@@ -365,35 +365,60 @@
 
 //     return 0;
 // }
+// #include <stdio.h>
+
+// int a[100000];
+
+// int main()
+// {
+//     int n;
+
+//     scanf("%d", &n);
+
+//     for (int i = 0; i < n; i++)
+// {
+//     scanf("%d", &a[i]);
+// }
+
+// for (int i = 0, j = n - 1; i <= j; i++, j--)
+// {
+
+//     int temp = a[i];
+//     a[i] = a[j];
+//     a[j] = temp;
+// }
+
+// for (int i = 0; i < n; i++)
+//     {
+//         printf("%d ", a[i]);
+//     }
+
+//     printf("\n");
+
+//     return 0;
+// }
+
 #include <stdio.h>
 
 int a[100000];
 
 int main()
 {
-    int n;
+    int n, k;
+    int count = 0;
+    scanf("%d %d", &n, &k);
 
-    scanf("%d", &n);
-
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n; i++)
     {
         scanf("%d", &a[i]);
     }
 
-    for (int i = 0, j = n - 1; i <= j; i++, j--)
+    for (int i = 1; i <= k; i++)
     {
-
-        int temp = a[i];
-        a[i] = a[j];
-        a[j] = temp;
+        if (a[k] <= a[i] && a[i] > 0)
+        {
+            count++;
+        }
     }
-
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", a[i]);
-    }
-
-    printf("\n");
-
-    return 0;
+    printf("%d ", count);
 }
