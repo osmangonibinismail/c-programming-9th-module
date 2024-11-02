@@ -398,27 +398,54 @@
 //     return 0;
 // }
 
+// #include <stdio.h>
+
+// int a[100000];
+
+// int main()
+// {
+//     int n, k;
+//     int count = 0;
+//     scanf("%d %d", &n, &k);
+
+//     for (int i = 1; i <= n; i++)
+//     {
+//         scanf("%d", &a[i]);
+//     }
+
+//     for (int i = 1; i <= k; i++)
+//     {
+//         if (a[k] <= a[i] && a[i] > 0)
+//         {
+//             count++;
+//         }
+//     }
+//     printf("%d ", count);
+// }
 #include <stdio.h>
 
 int a[100000];
 
 int main()
 {
-    int n, k;
-    int count = 0;
-    scanf("%d %d", &n, &k);
+    int n;
+    int move = 0;
+    scanf("%d", &n);
 
-    for (int i = 1; i <= n; i++)
+    for (int i = 0; i < n; i++)
     {
         scanf("%d", &a[i]);
     }
 
-    for (int i = 1; i <= k; i++)
+    for (int i = 1; i < n; i++)
     {
-        if (a[k] <= a[i] && a[i] > 0)
+        if (a[i] < a[i - 1])
         {
-            count++;
+            move = move + a[i - 1] - a[i];
+            a[i] = a[i - 1];
         }
     }
-    printf("%d ", count);
+    printf("%d ", move);
+
+    return 0;
 }
