@@ -422,30 +422,30 @@
 //     }
 //     printf("%d ", count);
 // }
-#include <stdio.h>
+// #include <stdio.h>
 
-int a[100000];
+// int a[100000];
 
-int main()
-{
-    int n;
-    int move = 0;
-    scanf("%d", &n);
+// int main()
+// {
+//     int n;
+//     int move = 0;
+//     scanf("%d", &n);
 
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d", &a[i]);
-    }
+//     for (int i = 0; i < n; i++)
+//     {
+//         scanf("%d", &a[i]);
+//     }
 
-    for (int i = 1; i < n; i++)
-    {
-        if (a[i] < a[i - 1])
-        {
-            move = move + a[i - 1] - a[i];
-            a[i] = a[i - 1];
-        }
-    }
-    printf("%d ", move);
+//     for (int i = 1; i < n; i++)
+//     {
+//         if (a[i] < a[i - 1])
+//         {
+//             move = move + a[i - 1] - a[i];
+//             a[i] = a[i - 1];
+//         }
+//     }
+//     printf("%d ", move);
 
-    return 0;
-}
+//     return 0;
+// }
