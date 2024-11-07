@@ -519,21 +519,50 @@
 
 //     return 0;
 // }
-#include<stdio.h>
-int main()
-{
-    // float a[100000];
+// #include<stdio.h>
+// int main()
+// {
+//     // float a[100000];
 
-    // for(int i = 0; i < 5; i++){
-    //     scanf("%f", &a[i]);
-    // }
+//     // for(int i = 0; i < 5; i++){
+//     //     scanf("%f", &a[i]);
+//     // }
 
 
-    for(int i = 0; i <= 100; i++){
-        printf("a[%.2d]\n", i);
-    }
+//     for(int i = 0; i <= 100; i++){
+//         printf("a[%.2d]\n", i);
+//     }
 
     
 
-    return 0;
+//     return 0;
+// }
+
+#include<stdio.h>
+#include<limits.h>
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    int a[n];
+
+    for(int i = 0; i < n; i++){
+        scanf("%d", &a[i]);
+    }
+
+
+    int min = INT_MAX, max = INT_MIN;
+
+    for(int i = 0; i < n; i++){
+        if(a[i] < min){
+            min = a[i];
+        }
+
+        if(a[i] > max){
+            max = a[i];
+        }
+    }
+
+    printf("Minimum = %d Maximum = %d", min, max);
 }
