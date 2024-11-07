@@ -1,1 +1,1 @@
-Minimum = 2 Maximum = 9
+2 3

@@ -538,31 +538,155 @@
 //     return 0;
 // }
 
-#include<stdio.h>
-#include<limits.h>
-int main()
-{
-    int n;
-    scanf("%d", &n);
+// #include<stdio.h>
+// #include<limits.h>
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
 
-    int a[n];
+//     int a[n];
 
-    for(int i = 0; i < n; i++){
-        scanf("%d", &a[i]);
+//     for(int i = 0; i < n; i++){
+//         scanf("%d", &a[i]);
+//     }
+
+
+//     int min = INT_MAX, max = INT_MIN;
+
+//     for(int i = 0; i < n; i++){
+//         if(a[i] < min){
+//             min = a[i];
+//         }
+
+//         if(a[i] > max){
+//             max = a[i];
+//         }
+//     }
+
+//     printf("Minimum = %d Maximum = %d", min, max);
+// }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     int N;
+//     scanf("%d", &N);
+    
+//     long long sum = 0;
+    
+//     for (int i = 0; i < N; i++) {
+//         int num;
+//         scanf("%d", &num);
+        
+//         sum += num;
+//     }
+    
+//     printf("%lld\n", llabs(sum));
+    
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+
+// int main() {
+//     int N;
+//     scanf("%d", &N);
+    
+//     int A[N];
+//     for (int i = 0; i < N; i++) {
+//         scanf("%d", &A[i]);
+//     }
+    
+//     int X;
+//     scanf("%d", &X);
+    
+//     int position = -1;
+    
+//     for (int i = 0; i < N; i++) {
+//         if (A[i] == X) {
+//             position = i;
+//             break;
+//         }
+//     }
+    
+//     printf("%d\n", position);
+    
+//     return 0;
+// }
+
+
+// #include <stdio.h>
+
+// int main() {
+//     int N;
+//     scanf("%d", &N);
+    
+//     int A[N];
+//     for (int i = 0; i < N; i++) {
+//         scanf("%d", &A[i]);
+//     }
+    
+//     for (int i = 0; i < N; i++) {
+//         if (A[i] > 0) {
+//             A[i] = 1;
+//         } else if (A[i] < 0) {
+//             A[i] = 2;
+//         }
+//     }
+    
+//     for (int i = 0; i < N; i++) {
+//         printf("%d ", A[i]);
+//     }
+//     printf("\n");
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main() {
+//     int N;
+//     scanf("%d", &N);
+    
+//     int A[N];
+//     for (int i = 0; i < N; i++) {
+//         scanf("%d", &A[i]);
+//     }
+    
+//     for (int i = 0; i < N; i++) {
+//         if (A[i] <= 10) {
+//             printf("A[%d] = %d\n", i, A[i]);
+//         }
+//     }
+
+//     return 0;
+// }
+
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+    
+    int A[N];
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &A[i]);
     }
+    
+    int min_value = A[0];
+    int min_position = 1;
 
-
-    int min = INT_MAX, max = INT_MIN;
-
-    for(int i = 0; i < n; i++){
-        if(a[i] < min){
-            min = a[i];
-        }
-
-        if(a[i] > max){
-            max = a[i];
+    for (int i = 1; i < N; i++) {
+        if (A[i] < min_value) {
+            min_value = A[i];
+            min_position = i + 1;
         }
     }
+    
+    printf("%d %d\n", min_value, min_position);
 
-    printf("Minimum = %d Maximum = %d", min, max);
+    return 0;
 }
