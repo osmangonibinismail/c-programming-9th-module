@@ -450,35 +450,90 @@
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int a[100000];
+// int a[100000];
 
+// int main()
+// {
+//     int n;
+
+//     scanf("%d", &n);
+
+//     for (int i = 0; i < n; i++)
+// {
+//     scanf("%d", &a[i]);
+// }
+
+// for (int i = 0, j = n - 1; i <= j; i++, j--)
+// {
+
+//     int temp = a[i];
+//     a[i] = a[j];
+//     a[j] = temp;
+// }
+
+// for (int i = 0; i < n; i++)
+//     {
+//         printf("%d ", a[i]);
+//     }
+
+//     printf("\n");
+
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int main()
+// {
+//     int a[100000];
+
+//     for(int i = 0; i < 5; i++){
+//         scanf("%d", &a[i]);
+//     }
+
+
+//     for(int i = 0; i < 5; i++){
+//         printf("%d ", a[i]);
+//     }
+
+    
+
+//     return 0;
+// }
+// #include<stdio.h>
+// int main()
+// {
+//     float a[100000];
+
+//     for(int i = 0; i < 5; i++){
+//         scanf("%f", &a[i]);
+//     }
+
+
+//     for(int i = 0; i < 5; i++){
+//         printf("%.2f ", a[i]);
+//     }
+
+    
+
+//     return 0;
+// }
+#include<stdio.h>
 int main()
 {
-    int n;
+    // float a[100000];
 
-    scanf("%d", &n);
+    // for(int i = 0; i < 5; i++){
+    //     scanf("%f", &a[i]);
+    // }
 
-    for (int i = 0; i < n; i++)
-{
-    scanf("%d", &a[i]);
-}
 
-for (int i = 0, j = n - 1; i <= j; i++, j--)
-{
-
-    int temp = a[i];
-    a[i] = a[j];
-    a[j] = temp;
-}
-
-for (int i = 0; i < n; i++)
-    {
-        printf("%d ", a[i]);
+    for(int i = 0; i <= 100; i++){
+        printf("a[%.2d]\n", i);
     }
 
-    printf("\n");
+    
 
     return 0;
 }
