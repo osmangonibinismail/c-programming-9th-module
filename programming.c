@@ -492,12 +492,9 @@
 //         scanf("%d", &a[i]);
 //     }
 
-
 //     for(int i = 0; i < 5; i++){
 //         printf("%d ", a[i]);
 //     }
-
-    
 
 //     return 0;
 // }
@@ -510,12 +507,9 @@
 //         scanf("%f", &a[i]);
 //     }
 
-
 //     for(int i = 0; i < 5; i++){
 //         printf("%.2f ", a[i]);
 //     }
-
-    
 
 //     return 0;
 // }
@@ -528,12 +522,9 @@
 //     //     scanf("%f", &a[i]);
 //     // }
 
-
 //     for(int i = 0; i <= 100; i++){
 //         printf("a[%.2d]\n", i);
 //     }
-
-    
 
 //     return 0;
 // }
@@ -550,7 +541,6 @@
 //     for(int i = 0; i < n; i++){
 //         scanf("%d", &a[i]);
 //     }
-
 
 //     int min = INT_MAX, max = INT_MIN;
 
@@ -573,62 +563,60 @@
 // int main() {
 //     int N;
 //     scanf("%d", &N);
-    
+
 //     long long sum = 0;
-    
+
 //     for (int i = 0; i < N; i++) {
 //         int num;
 //         scanf("%d", &num);
-        
+
 //         sum += num;
 //     }
-    
+
 //     printf("%lld\n", llabs(sum));
-    
+
 //     return 0;
 // }
-
 
 // #include <stdio.h>
 
 // int main() {
 //     int N;
 //     scanf("%d", &N);
-    
+
 //     int A[N];
 //     for (int i = 0; i < N; i++) {
 //         scanf("%d", &A[i]);
 //     }
-    
+
 //     int X;
 //     scanf("%d", &X);
-    
+
 //     int position = -1;
-    
+
 //     for (int i = 0; i < N; i++) {
 //         if (A[i] == X) {
 //             position = i;
 //             break;
 //         }
 //     }
-    
+
 //     printf("%d\n", position);
-    
+
 //     return 0;
 // }
-
 
 // #include <stdio.h>
 
 // int main() {
 //     int N;
 //     scanf("%d", &N);
-    
+
 //     int A[N];
 //     for (int i = 0; i < N; i++) {
 //         scanf("%d", &A[i]);
 //     }
-    
+
 //     for (int i = 0; i < N; i++) {
 //         if (A[i] > 0) {
 //             A[i] = 1;
@@ -636,7 +624,7 @@
 //             A[i] = 2;
 //         }
 //     }
-    
+
 //     for (int i = 0; i < N; i++) {
 //         printf("%d ", A[i]);
 //     }
@@ -650,12 +638,12 @@
 // int main() {
 //     int N;
 //     scanf("%d", &N);
-    
+
 //     int A[N];
 //     for (int i = 0; i < N; i++) {
 //         scanf("%d", &A[i]);
 //     }
-    
+
 //     for (int i = 0; i < N; i++) {
 //         if (A[i] <= 10) {
 //             printf("A[%d] = %d\n", i, A[i]);
@@ -665,28 +653,110 @@
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
-    int N;
-    scanf("%d", &N);
-    
-    int A[N];
-    for (int i = 0; i < N; i++) {
-        scanf("%d", &A[i]);
-    }
-    
-    int min_value = A[0];
-    int min_position = 1;
+// int main() {
+//     int N;
+//     scanf("%d", &N);
 
-    for (int i = 1; i < N; i++) {
-        if (A[i] < min_value) {
-            min_value = A[i];
-            min_position = i + 1;
-        }
-    }
-    
-    printf("%d %d\n", min_value, min_position);
+//     int A[N];
+//     for (int i = 0; i < N; i++) {
+//         scanf("%d", &A[i]);
+//     }
 
-    return 0;
-}
+//     int min_value = A[0];
+//     int min_position = 1;
+
+//     for (int i = 1; i < N; i++) {
+//         if (A[i] < min_value) {
+//             min_value = A[i];
+//             min_position = i + 1;
+//         }
+//     }
+
+//     printf("%d %d\n", min_value, min_position);
+
+//     return 0;
+// }
+
+// #include<stdio.h>
+// int a[100000], b[100000];
+
+// int main()
+// {
+//     int length1 = 0, length2 = 0;
+
+//     scanf("%d", &length1);
+
+//     for(int i = 0; i < length1; i++)
+//     {
+//         scanf("%d", &a[i]);
+//     }
+
+//     printf("Before copy\n");
+
+//     for(int i = 0; i < length1; i++){
+//         printf("%d ", a[i]);
+//     }
+//     printf("\n");
+//     for(int i = 0; i < length1; i++){
+//         printf("%d ", b[i]);
+//     }
+
+//     printf("\n");
+
+//     for(int i = 0; i < length1; i++){
+//         b[i] = a[i];
+//     }
+
+//     length2 = length1;
+
+//     printf("After copy\n");
+//     for(int i = 0; i < length1; i++){
+//         printf("%d ", a[i]);
+//     }
+//     printf("\n");
+//     for(int i = 0; i < length2; i++){
+//         printf("%d ", b[i]);
+//     }
+// }
+
+// #include<stdio.h>
+// int main()
+// {
+//     int row = 3, col = 3;
+//     int ar[row] [col], i, j;
+
+//     for(i = 0; j < row; i++)
+//     {
+//         for(j = 0; j < col; j++)
+//         {
+
+//         }
+//     }
+// }
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main()
+// {
+//     int row = 5, col = 5;
+//     int ar[row] [col], i, j;
+//     int ans, x, y;
+
+//     for (i = 0; i < row; i++)
+//     {
+//         for (j = 0; j < col; j++)
+//         {
+
+//             scanf("%d", &ar[i][j]);
+//             if (ar[i][j] == 1)
+//             {
+//                 x = i;
+//                 y = j;
+//             }
+//         }
+//     }
+//     ans = abs(x - 2) + abs(y - 2);
+//     printf("%d", &ans);
+//     return 0;
+// }
