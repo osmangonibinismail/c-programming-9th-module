@@ -760,3 +760,28 @@
 //     printf("%d", &ans);
 //     return 0;
 // }
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int row = 5, col = 5;
+    int ar[row] [col], i, j;
+    int ans, x, y;
+
+    for (i = 0; i < row; i++)
+    {
+        for (j = 0; j < col; j++)
+        {
+
+            scanf("%d", &ar[i][j]);
+            if (ar[i][j] == 1)
+            {
+                x = i;
+                y = j;
+            }
+        }
+    }
+    ans = abs(x - 2) + abs(y - 2);
+    printf("%d", &ans);
+    return 0;
+}
