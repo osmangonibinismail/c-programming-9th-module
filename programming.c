@@ -760,28 +760,159 @@
 //     printf("%d", &ans);
 //     return 0;
 // }
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main()
+// {
+//     int row = 5, col = 5;
+//     int ar[row] [col], i, j;
+//     int ans, x, y;
+
+//     for (i = 0; i < row; i++)
+//     {
+//         for (j = 0; j < col; j++)
+//         {
+
+//             scanf("%d", &ar[i][j]);
+//             if (ar[i][j] == 1)
+//             {
+//                 x = i;
+//                 y = j;
+//             }
+//         }
+//     }
+//     ans = abs(x - 2) + abs(y - 2);
+//     printf("%d", &ans);
+//     return 0;
+// }
+
+// #include <stdio.h>
+// int main()
+
+// {
+//     int a[100000];
+
+//     int length = 0;
+//     scanf("%d", &length);
+
+//     for (int i = 0; i < length; i++)
+//     {
+//         scanf("%d", &a[i]);
+//     }
+//     // for (int i = 0; i < length; i++)
+//     // {
+//     //     printf("%d ", a[i]);
+//     // }
+
+//     int index, value;
+//     scanf("%d %d", &index, &value);
+
+//     length++;
+
+//     for(int i = length - 1; i >= index; i--){
+//         a[i + 1] = a[i];
+//     }
+
+//     a[index] = value;
+
+//     for(int i = 0; i < length; i++){
+//         printf("%d ", a[i]);
+//     }
+// }
+
+// #include <stdio.h>
+// int main()
+// {
+//     int a[100000];
+
+//     int length = 0;
+//     scanf("%d", &length);
+
+//     for (int i = 0; i < length; i++)
+//     {
+//         scanf("%d", &a[i]);
+//     }
+
+//     int index;
+//     scanf("%d", &index);
+
+//     if (index < 0 || index >= length)
+//     {
+//         printf("Wrong Answer\n");
+//     }
+
+//     else
+//     {
+//         for (int i = index; i < length - 1; i++)
+//         {
+//             a[i] = a[i + 1];
+//         }
+
+//         length--;
+
+//         for (int i = 0; i < length; i++)
+//         {
+//             printf("%d ", a[i]);
+//         }
+//     }
+// }
+
+// #include<stdio.h>
+// int main()
+// {
+//     int a[100000], b[100000];
+
+//     int length = 0;
+//     scanf("%d", &length);
+
+//     for(int i = 0; i < length; i++){
+//         scanf("%d", & a[i]);
+//     }
+
+//     for(int i = 0, j = length - 1; i < length; i++, j--){
+//         b[j] = a[i];
+//     }
+
+//     for(int i = 0; i < length; i++){
+//         a[i] = b[i];
+//     }
+
+//     for(int i = 0; i < length; i++){
+//         printf("%d ", a[i]);
+//     }
+
+//     printf("\n");
+
+//     // for(int i = 0; i < length; i++){
+//     //     printf("%d ", b[i]);
+//     // }
+// }
+
+#include<stdio.h>
+
+int a[100000];
+
 int main()
 {
-    int row = 5, col = 5;
-    int ar[row] [col], i, j;
-    int ans, x, y;
+    int n;
+    scanf("%d", &n);
 
-    for (i = 0; i < row; i++)
+    for(int i = 0; i < n; i++)
     {
-        for (j = 0; j < col; j++)
-        {
-
-            scanf("%d", &ar[i][j]);
-            if (ar[i][j] == 1)
-            {
-                x = i;
-                y = j;
-            }
-        }
+        scanf("%d", &a[i]);
     }
-    ans = abs(x - 2) + abs(y - 2);
-    printf("%d", &ans);
+
+    for(int i = 0, j = n - 1; i <= j; i++, j--){
+        int temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+    }
+
+    for(int i = 0; i < n; i++){
+        printf("%d ", a[i]);
+    }
+
+    printf("\n");
+
     return 0;
 }
